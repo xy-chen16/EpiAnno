@@ -5,8 +5,10 @@ The recent advances in profiling epigenetic landscape of thousands of individual
 <div align=center>
 <img src = "inst/Fig1-01.jpg" width = 40% height = 40%>
 </div>
-## Installation
-`Requiements:  
+## Installation  
+
+`  
+Requiements:  
 1. Python 3.5 or greater version  
 2. Packages:  
     numpy (>=1.15.1)  
