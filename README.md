@@ -4,7 +4,8 @@ The recent advances in profiling epigenetic landscape of thousands of individual
 
 <div align=center>
 <img src = "inst/Fig1-01.jpg" width = 40% height = 40%>
-</div>
+</div>  
+
 ## Installation  
 
 `  
