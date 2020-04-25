@@ -8,7 +8,7 @@ The recent advances in profiling epigenetic landscape of thousands of individual
 
 ## Installation  
 
-`  
+```  
 Requiements:  
 1. Python 3.5 or greater version  
 2. Packages:  
@@ -23,4 +23,4 @@ pip install -U numpy
 pip install tensorflow-probability==0.7.0  
 pip install tensorflow-gpu==1.15.2 #pip install tensorflow==1.15.2  
 pip install -U hickle  
-`
+```
