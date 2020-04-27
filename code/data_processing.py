@@ -13,7 +13,6 @@ def data_processing(train_data,train_label,test_data,test_label,peak_rate):
     train = np.sum(train_data,axis = 1)
     for i in range(train.shape[0]):
         if train[i]==0:
-            print(i)
             train_data = np.delete(train_data,i+k,axis = 0)
             train_label = np.delete(train_label,i+k,axis = 0)
             k = k-1
@@ -25,7 +24,6 @@ def data_processing(train_data,train_label,test_data,test_label,peak_rate):
     k = 0
     for i in range(test.shape[0]):
         if test[i]==0:
-            print(i)
             test_data = np.delete(test_data,i+k,axis = 0)
             test_label = np.delete(test_label,i+k,axis = 0)
             k = k-1
@@ -49,7 +47,6 @@ def data_selection(train_data,train_label,test_data,test_label,peak_rate):
     train = np.sum(train_data,axis = 1)
     for i in range(train.shape[0]):
         if train[i]==0:
-            print(i)
             train_data = np.delete(train_data,i+k,axis = 0)
             train_label = np.delete(train_label,i+k,axis = 0)
             k = k-1
@@ -57,7 +54,6 @@ def data_selection(train_data,train_label,test_data,test_label,peak_rate):
     k = 0
     for i in range(test.shape[0]):
         if test[i]==0:
-            print(i)
             test_data = np.delete(test_data,i+k,axis = 0)
             test_label = np.delete(test_label,i+k,axis = 0)
             k = k-1

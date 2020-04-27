@@ -11,8 +11,8 @@ def EpiAnno(D0,D,n_classes,sample_shape):
             scale_diag=sigma,name='z%d'%i)for i in range(n_classes)]
     
     h = tf.concat(z,axis = 0)
-    beta = ed.Normal(tf.ones([D0, D],dtype = dtype), 1., name="beta")
-    alpha = ed.Normal(tf.ones([D],dtype = dtype), 1., name="alpha")
+    beta = ed.Normal(tf.zeros([D0, D],dtype = dtype), 1., name="beta")
+    alpha = ed.Normal(tf.zeros([D],dtype = dtype), 1., name="alpha")
     
     output = tf.nn.leaky_relu(h @ beta + alpha,alpha = 0.5)
     noise = ed.InverseGamma(concentration=tf.ones([1], dtype=dtype),
@@ -74,9 +74,10 @@ def ELBO(mu,sigma,z,w,noise,x,qmu,qsigma,qz,qw,qnoise,D,N):
 
 def predict_z(posterior_qw,x):
     x_tmp = np.copy(x)
+    x_tmp_1 = np.copy(x)
     x_tmp[x_tmp>0]=0
-    x_tmp = x+x_tmp
-    z = (x_tmp-posterior_qw[1])@(np.mat(posterior_qw[0]).I)
+    x_tmp_1 = x_tmp_1+x_tmp
+    z = (x_tmp_1-posterior_qw[1])@(np.mat(posterior_qw[0]).I)
     return z
 
 def predict_target(posterior_mu, posterior_sigma,test_data):
@@ -90,26 +91,23 @@ def predict_target(posterior_mu, posterior_sigma,test_data):
     pred_target = np.argmax(prob,0) 
     return pred_target
 
-def train(qmu,qsigma,qw,elbo,learning_rate = 0.15,num_epochs = 50000,verbose = True):
+def train(qmu,qsigma,qw,elbo,sess,learning_rate = 0.15,num_epochs = 50000,verbose = True):
     posterior_mu = []
     posterior_sigma = []
     post_qw = []
-    tf_config = tf.ConfigProto()
-    tf_config.gpu_options.allow_growth=True
-    with tf.Session(config=tf_config) as sess:
-        optimizer = tf.train.AdamOptimizer(learning_rate)
-        train = optimizer.minimize(-elbo)
-        init = tf.global_variables_initializer()
-        sess.run(init)
-        for i in range(num_epochs+1):
-            sess.run(train)
-            if i>num_epochs-1000:
-                posterior_mu.append(sess.run(qmu))
-                posterior_sigma.append(sess.run(qsigma))
-                post_qw.append(sess.run(qw))
-            if verbose:
-                if i % 10 == 0: print(".", end="", flush=True)
-                if i % 100 == 0:
-                    str_elbo = str(sess.run(elbo) / 1000) + " k"
-                    print("\n" + str(i) + " epochs\t" + str_elbo, end="", flush=True)
+    optimizer = tf.train.AdamOptimizer(learning_rate)
+    train = optimizer.minimize(-elbo)
+    init = tf.global_variables_initializer()
+    sess.run(init)
+    for i in range(num_epochs+1):
+        sess.run(train)
+        if i>=num_epochs-1000:
+            posterior_mu.append(sess.run(qmu))
+            posterior_sigma.append(sess.run(qsigma))
+            post_qw.append(sess.run(qw))
+        if verbose:
+            if i % 10 == 0: print(".", end="", flush=True)
+            if i % 100 == 0:
+                str_elbo = str(sess.run(elbo) / 1000) + " k"
+                print("\n" + str(i) + " epochs\t" + str_elbo, end="", flush=True)
     return posterior_mu,posterior_sigma,post_qw
