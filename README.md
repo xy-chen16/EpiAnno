@@ -23,6 +23,8 @@ pip install -U numpy
 pip install tensorflow-probability==0.7.0  
 pip install tensorflow-gpu==1.15.2 #pip install tensorflow==1.15.2  
 pip install -U hickle  
+git clone https://github.com/xy-chen16/EpiAnno   
+cd EpiAnno   
 ```
 ## Tutorial  
 ### self-projection   
@@ -30,7 +32,7 @@ Two input files(.hkl) are required: 1) a samples-by-peaks Array (samples * peaks
   
 The dataset we used is available on github. First unzip the datasets:  
 ```  
-$ tar -xzvf data/self_projection.tar.gz
+$ tar -xzvf data/self_projection.tar.gz -C data
 ```
 Then run the self-projection subprogram:
 ```   
@@ -88,7 +90,7 @@ Three input files(.hkl) are required: 1) a samples-by-peaks Array of train-datas
   
 The dataset we used is available on github. First unzip the datasets:  
 ```  
-$ tar -xjvf data/crossdataset_projection_Forebrain.tar.bz2 
+$ tar -xjvf data/crossdataset_projection_Forebrain.tar.bz2 -C data
 ```
 Then run the crossdataset-projection subprogram:
 ```   
