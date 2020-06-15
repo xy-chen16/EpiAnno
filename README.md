@@ -89,7 +89,6 @@ Three input files(.hkl) are required: 1) a samples-by-peaks Array of train-datas
 The dataset we used is available on github. First unzip the datasets:  
 ```  
 $ tar -xjvf data/crossdataset_projection_Forebrain.tar.bz2 
-$ tar -xjvf data/crossdataset_projection_ALL_blood.tar.bz2
 ```
 Then run the crossdataset-projection subprogram:
 ```   
