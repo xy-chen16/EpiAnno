@@ -19,12 +19,12 @@ Requiements:
   
 Package installation:
   
-pip install -U numpy  
-pip install tensorflow-probability==0.7.0  
-pip install tensorflow-gpu==1.15.2 #pip install tensorflow==1.15.2  
-pip install -U hickle  
-git clone https://github.com/xy-chen16/EpiAnno   
-cd EpiAnno   
+$ pip install -U numpy  
+$ pip install tensorflow-probability==0.7.0  
+$ pip install tensorflow-gpu==1.15.2 #pip install tensorflow==1.15.2  
+$ pip install -U hickle  
+$ git clone https://github.com/xy-chen16/EpiAnno   
+$ cd EpiAnno   
 ```
 ## Tutorial  
 ### self-projection   
