@@ -98,7 +98,7 @@ $ python code/run_crossdataset_projection.py -d train_data_count.hkl -c train_ce
 ```
 For exsample:
 ```
-$ python run_crossdataset_projection.py -d data/crossdataset_projection_Forebrain/Forebrain_count.hkl -c data/crossdataset_projection_Forebrain/Forebrain_cell_type.hkl -t data/crossdataset_projection_Forebrain/MCA_Cerebellum_count.hkl -g 1
+$ python code/run_crossdataset_projection.py -d data/crossdataset_projection_Forebrain/Forebrain_count.hkl -c data/crossdataset_projection_Forebrain/Forebrain_cell_type.hkl -t data/crossdataset_projection_Forebrain/MCA_Cerebellum_count.hkl -g 1
 ```
 Or you can get help in this way:
 ```  
