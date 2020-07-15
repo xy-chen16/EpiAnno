@@ -36,11 +36,15 @@ $ tar -xzvf data/self_projection.tar.gz -C data
 ```
 Then run the self-projection subprogram:
 ```   
-$ python code/run_self_projection.py -d data_count.hkl -c cell_type.hkl -o outdir -g gpu
+$ cd code/
+$ python run_self_projection.py -d data_count.hkl -c cell_type.hkl -o outdir -g gpu
+$ cd ..
 ```
 For exsample:
 ```
-$ python code/run_self_projection.py -d data/self-projection/InSilico_count.hkl -c data/self-projection/InSilico_cell_type.hkl
+$ cd code/
+$ python run_self_projection.py -d data/self-projection/InSilico_count.hkl -c data/self-projection/InSilico_cell_type.hkl
+$ cd ..
 ```
 Or you can get help in this way:
 ```  
@@ -94,11 +98,15 @@ $ tar -xjvf data/crossdataset_projection_Forebrain.tar.bz2 -C data
 ```
 Then run the crossdataset-projection subprogram:
 ```   
-$ python code/run_crossdataset_projection.py -d train_data_count.hkl -c train_cell_type.hkl -t test_data_count.hkl -o outdir -g gpu
+$ cd code/
+$ python run_crossdataset_projection.py -d train_data_count.hkl -c train_cell_type.hkl -t test_data_count.hkl -o outdir -g gpu
+$ cd ..
 ```
 For exsample:
 ```
-$ python code/run_crossdataset_projection.py -d data/crossdataset_projection_Forebrain/Forebrain_count.hkl -c data/crossdataset_projection_Forebrain/Forebrain_cell_type.hkl -t data/crossdataset_projection_Forebrain/MCA_Cerebellum_count.hkl -g 1
+$ cd code/
+$ python run_crossdataset_projection.py -d data/crossdataset_projection_Forebrain/Forebrain_count.hkl -c data/crossdataset_projection_Forebrain/Forebrain_cell_type.hkl -t data/crossdataset_projection_Forebrain/MCA_Cerebellum_count.hkl -g 1
+$ cd ..
 ```
 Or you can get help in this way:
 ```  
@@ -143,4 +151,3 @@ optional arguments:
   --save_result SAVE_RESULT, -p SAVE_RESULT
                         Save test labels and predicted labels
 ```
-
