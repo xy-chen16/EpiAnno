@@ -3,7 +3,7 @@
 Recent advances in single-cell technologies have enabled the characterization of epigenomic heterogeneity at cellular level. Computational methods for automatic cell type annotation are in pressing need considering the exponential growth in the number of cells. However, the overwhelming majority of efforts has been focused on single-cell gene expression, and it has not been fully investigated for the annotation of single-cell epigenomic data, such as single-cell chromatin accessibility sequencing (scCAS) data. Here, we proposed EpiAnno, a probabilistic generative model integrated with a Bayesian neural network, to annotate scCAS data automatically in a supervised manner.  
 
 <div align=center>
-<img src = "inst/Model.png" width = 40% height = 40%>
+<img src = "inst/Model.png" width = 65% height = 65%>
 </div>  
 
 ## Installation  
