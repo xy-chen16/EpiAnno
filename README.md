@@ -24,11 +24,7 @@ Requiements:
     seaborn (0.10.0)
     pandas (>=1.1.0)
     umap-learn (>=0.4.1)
-    
-  
 Package installation:
-  
-
 $ git clone https://github.com/xy-chen16/EpiAnno   
 $ cd EpiAnno   
 $ pip install -r requirements.txt
