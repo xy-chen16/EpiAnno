@@ -11,22 +11,31 @@ Recent advances in single-cell technologies have enabled the characterization of
 ```  
 Requiements:  
 1. Python 3.5 or greater version  
-2. Packages:  
-    numpy (>=1.15.1)  
+2. CUDA 10.0 
+3. Packages for EpiAnno:  
+    numpy (>=1.19.1)  
     tensorflow_probability (0.7.0)  
     tensorflow(-gpu) (1.15.2)  
+4. Packages for demo:
     hickle (>=3.4)
+    scikit-learn (>=0.18)
+    hdf5storage (>=0.1.14)
+    matplotlib (>=3.3.0)
+    seaborn (0.10.0)
+    pandas (>=1.1.0)
+    umap-learn (>=0.4.1)
+    
   
 Package installation:
   
-$ pip install -U numpy  
-$ pip install tensorflow-probability==0.7.0  
-$ pip install tensorflow-gpu==1.15.2 #pip install tensorflow==1.15.2  
-$ pip install -U hickle  
+
 $ git clone https://github.com/xy-chen16/EpiAnno   
 $ cd EpiAnno   
+$ pip install -r requirements.txt
 ```
 ## Tutorial  
+### demo   
+We also provide a [quick-start notebook](https://github.com/xy-chen16/EpiAnno/blob/main/code/demo.ipynb) which describes the fundamentals in detail and reproduces the results of stPlus.
 ### self-projection   
 Two input files(.hkl) are required: 1) a samples-by-peaks Array (samples * peaks) 2) a list(vector) of cell-type labels.  
   
