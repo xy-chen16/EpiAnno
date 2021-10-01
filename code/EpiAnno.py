@@ -1,3 +1,11 @@
+
+"""
+# Authors: Xiaoyang Chen, Shengquan Chen
+# Created Time : Thu 30 Sep 2021 21:45:00 PM CST
+# File Name: EpiAnno.py
+# Description: 
+"""
+
 import numpy as np
 import tensorflow as tf
 from tensorflow_probability import edward2 as ed
@@ -19,6 +27,7 @@ def EpiAnno(D0,D,n_classes,sample_shape):
                             rate=tf.ones([1], dtype=dtype),name='noise')
     x = ed.Normal(loc = output, scale = noise, name = 'x')
     return mu,sigma,z,(beta,alpha),noise,x
+
 def Q(D0,D,n_classes,sample_shape):
     qmu_loc = [tf.Variable(np.zeros([D0]), dtype=dtype) for i in range(n_classes)]
     qmu_scale = [tf.nn.softplus(0.1 * tf.Variable(np.ones([D0]), dtype=dtype)) for i in range(n_classes)]
