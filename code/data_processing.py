@@ -35,6 +35,7 @@ def data_processing(train_data,train_label,test_data,test_label,peak_rate):
     train_data = ss.fit_transform(train_data)
     test_data = ss.transform(test_data)
     return train_data,train_label,test_data,test_label
+
 def data_selection(train_data,train_label,test_data,test_label,peak_rate):
     Y = np.array(train_data.T,dtype = 'float32')
     filter_peak = np.sum(Y >= 1, axis=1) >= round(peak_rate*Y.shape[1])
