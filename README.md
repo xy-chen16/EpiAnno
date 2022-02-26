@@ -31,7 +31,7 @@ $ pip install -r requirements.txt
 ```
 ## Tutorial  
 ### demo   
-We also provide a [quick-start notebook](https://github.com/xy-chen16/EpiAnno/blob/main/code/demo.ipynb) which describes the fundamentals in detail and reproduces the results of stPlus.
+We also provide a [quick-start notebook](https://github.com/xy-chen16/EpiAnno/code/demo.ipynb) which describes the fundamentals in detail and reproduces the results of stPlus.
 ### self-projection   
 Two input files(.hkl) are required: 1) a samples-by-peaks Array (samples * peaks) 2) a list(vector) of cell-type labels.  
   
