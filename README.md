@@ -13,7 +13,7 @@ Requiements:
 1. Python 3.5 or greater version  
 2. CUDA 10.0 
 3. Packages for EpiAnno:  
-    numpy (>=1.19.1)  
+    numpy (==1.19)  
     tensorflow_probability (0.7.0)  
     tensorflow(-gpu) (1.15.2)  
 4. Packages for demo:
