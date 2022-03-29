@@ -157,7 +157,7 @@ optional arguments:
                         Save test labels and predicted labels
 ```
 ## Citation
-If you find our work is useful for your research, please kindly cite our paper.
+If you find our work is useful for your research, please kindly cite our paper: 
 Chen, X., Chen, S., Song, S. et al. Cell type annotation of single-cell chromatin accessibility data via supervised Bayesian embedding. Nat Mach Intell 4, 116–126 (2022). <https://doi.org/10.1038/s42256-021-00432-w>
 ## Contact 
 If you have any questions, you can contact me from the email: <xychen20@mails.tsinghua.edu.cn>
