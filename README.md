@@ -1,5 +1,5 @@
 # EpiAnno
-#### Cell type annotation of single-cell epigenomic data via supervised Bayesian embedding
+#### [Cell type annotation of single-cell chromatin accessibility data via supervised Bayesian embedding](https://www.nature.com/articles/s42256-021-00432-w)
 Recent advances in single-cell technologies have enabled the characterization of epigenomic heterogeneity at cellular level. Computational methods for automatic cell type annotation are in pressing need considering the exponential growth in the number of cells. However, the overwhelming majority of efforts has been focused on single-cell gene expression, and it has not been fully investigated for the annotation of single-cell epigenomic data, such as single-cell chromatin accessibility sequencing (scCAS) data. Here, we proposed EpiAnno, a probabilistic generative model integrated with a Bayesian neural network, to annotate scCAS data automatically in a supervised manner.  
 
 <div align=center>
@@ -156,3 +156,8 @@ optional arguments:
   --save_result SAVE_RESULT, -p SAVE_RESULT
                         Save test labels and predicted labels
 ```
+## Citation
+If you find our work is useful for your research, please kindly cite our paper.
+Chen, X., Chen, S., Song, S. et al. Cell type annotation of single-cell chromatin accessibility data via supervised Bayesian embedding. Nat Mach Intell 4, 116–126 (2022). <https://doi.org/10.1038/s42256-021-00432-w>
+## Contact 
+If you have any questions, you can contact me from the email: <xychen20@mails.tsinghua.edu.cn>
